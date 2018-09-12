@@ -1,0 +1,50 @@
+﻿@page
+@model WebApplication1_Gluhovskiy.Pages.Works.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Work</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Work.ID" />
+            <div class="form-group">
+                <label asp-for="Work.Title" class="control-label"></label>
+                <input asp-for="Work.Title" class="form-control" />
+                <span asp-validation-for="Work.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Work.ReleaseDate" class="control-label"></label>
+                <input asp-for="Work.ReleaseDate" class="form-control" />
+                <span asp-validation-for="Work.ReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Work.GenreID" class="control-label"></label>
+                <input asp-for="Work.GenreID" class="form-control" />
+                <span asp-validation-for="Work.GenreID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Work.SeriesID" class="control-label"></label>
+                <input asp-for="Work.SeriesID" class="form-control" />
+                <span asp-validation-for="Work.SeriesID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
