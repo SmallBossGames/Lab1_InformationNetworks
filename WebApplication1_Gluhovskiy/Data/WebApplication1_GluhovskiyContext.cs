@@ -14,5 +14,7 @@ namespace WebApplication1_Gluhovskiy.Models
         }
 
         public DbSet<WebApplication1_Gluhovskiy.Models.Work> Work { get; set; }
+        public DbSet<WebApplication1_Gluhovskiy.Models.Genre> Genres { get; set; }
+        public DbSet<WebApplication1_Gluhovskiy.Models.Series> Series { get; set; }
     }
 }

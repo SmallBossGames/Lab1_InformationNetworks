@@ -11,6 +11,7 @@ namespace WebApplication1_Gluhovskiy.Models
         public int ID { get; set; }
 
         [Display(Name ="Название")]
+        [MaxLength(100)]
         public string Title { get; set; }
 
         [Display(Name = "Дата выхода")]
@@ -24,7 +25,7 @@ namespace WebApplication1_Gluhovskiy.Models
         public int SeriesID { get; set; }
 
         [Display(Name = "Описание")]
-        [DataType(DataType.Text)]
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
     }
 }

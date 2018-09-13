@@ -11,10 +11,11 @@ namespace WebApplication1_Gluhovskiy.Models
         public int GenreID { get; set; }
 
         [Display(Name = "Жанр")]
+        [MaxLength(100)]
         public string GenreName { get; set; }
 
         [Display(Name = "Ссылка информацию о жанре")]
-        [DataType(DataType.Text)]
+        [DataType(DataType.MultilineText)]
         public string GenreDescription { get; set; }
     }
 }

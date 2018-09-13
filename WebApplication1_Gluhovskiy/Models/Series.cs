@@ -15,7 +15,7 @@ namespace WebApplication1_Gluhovskiy.Models
         public string SeriesName { get; set; }
 
         [Display(Name = "Описание серии")]
-        [DataType(DataType.Text)]
+        [DataType(DataType.MultilineText)]
         public string SeriesDescription { get; set; }
     }
 }
