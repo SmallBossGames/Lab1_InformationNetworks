@@ -1,0 +1,48 @@
+﻿@page
+@model WebApplication1_Gluhovskiy.Pages.Series1.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Series[0].SeriesID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Series[0].SeriesName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Series[0].SeriesDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Series) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeriesID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeriesName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeriesDescription)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.SeriesID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.SeriesID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.SeriesID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

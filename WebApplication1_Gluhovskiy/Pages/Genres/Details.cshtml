@@ -1,0 +1,31 @@
+﻿@page
+@model WebApplication1_Gluhovskiy.Pages.Genres.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Genre</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre.GenreName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Genre.GenreName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre.GenreDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Genre.GenreDescription)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Genre.GenreID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
