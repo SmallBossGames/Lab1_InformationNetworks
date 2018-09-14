@@ -15,7 +15,7 @@ namespace WebApplication1_Gluhovskiy.Models
         public string GenreName { get; set; }
 
         [Display(Name = "Ссылка информацию о жанре")]
-        [DataType(DataType.MultilineText)]
+        [DataType(DataType.Url)]
         public string GenreDescription { get; set; }
     }
 }

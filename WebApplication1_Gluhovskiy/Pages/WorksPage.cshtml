@@ -1,0 +1,18 @@
+﻿@page
+@model WebApplication1_Gluhovskiy.Pages.WorksPageModel
+@{
+    ViewData["Title"] = "WorksPage";
+}
+
+<h1>Произведения гениального автора</h1>
+@foreach (var item in Model.FullWorkDatas)
+{
+    <h2>@Html.DisplayFor(mod => item.Title)</h2>
+    <h4>
+        <b>Серия:</b> @Html.DisplayFor(mod => item.SeriesName) <br>
+        <b>Жанр:</b> <a href=@item.GenreDescription>@Html.DisplayFor(mod => item.GenreName)</a>  <br>
+        <b>Дата выхода:</b> @Html.DisplayFor(mod => item.ReleaseDate) <br>
+    </h4>
+    <h3>Описание произведения</h3>
+    <p2> @Html.DisplayFor(mod => item.Description)</p2>
+}
