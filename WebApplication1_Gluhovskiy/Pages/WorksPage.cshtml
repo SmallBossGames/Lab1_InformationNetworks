@@ -4,9 +4,10 @@
     ViewData["Title"] = "WorksPage";
 }
 
-<h1>Произведения гениального автора</h1>
+<h1>Произведения Дмитрия Глуховского</h1>
 @foreach (var item in Model.FullWorkDatas)
 {
+    <hr>
     <h2>@Html.DisplayFor(mod => item.Title)</h2>
     <h4>
         <b>Серия:</b> @Html.DisplayFor(mod => item.SeriesName) <br>
